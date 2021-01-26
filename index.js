@@ -1,3 +1,8 @@
 const fs=require("fs");
-var x=fs.writeFileSync("read.txt","hello friends");
-console.log(x);
+fs.writeFileSync("read.txt","hello friends");
+fs.appendFileSync("read.txt","hello friend welcome");
+
+const buf_data=fs.readFileSync("read.txt");
+
+
+console.log(buf_data.toString());
